@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'npm/assets/version'
+require 'skyfire/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "npm-assets"
-  spec.version       = Npm::Assets::VERSION
+  spec.name          = "skyfire"
+  spec.version       = Skyfire::VERSION
   spec.authors       = ["Andrew McNamara"]
   spec.email         = ["andrewm@jobready.com.au"]
 
   spec.summary       = %q{Rails asset pipeline replacement}
   spec.description   = %q{Rails asset pipeline replacement.}
-  spec.homepage      = "https://github.com/jobready/npm-assets"
+  spec.homepage      = "https://github.com/jobready/skyfire"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
@@ -22,9 +22,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.default_executable = "npm-assets"
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.10"

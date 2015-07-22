@@ -1,9 +1,0 @@
-{
-  "scripts": {
-    "build": "rm -rf public/vendor/* && npm run build:js && npm run build:css && npm run hash"
-  },
-  "devDependencies": {
-    "babelify": "^6.1.3",
-    "browserify": "^11.0.0"
-  }
-}
