@@ -1,6 +1,6 @@
-# NPM Assets
+# Skyfire
 
-NPM Assets replaces the asset pipeline in Ruby On Rails applications.
+Skyfire is a ruby gem (and node package) that replaces the asset pipeline in Ruby On Rails applications.
 
 It uses node utilities (npm, browserify) to manage assets and js/css packages.
 
