@@ -1,8 +1,25 @@
-# Npm::Assets
+# NPM Assets
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/npm/assets`. To experiment with that code, run `bin/console` for an interactive prompt.
+NPM Assets is entended to replace the asset pipeline in Ruby On Rails applications.
 
-TODO: Delete this and the text above, and describe your gem
+It uses node utilities (browserify) to manage assets and js/css packages.
+
+## Rationale
+
+### Language
+
+We love ES6 and integration into the existing asset pipeline can be a bit hit and miss.
+
+### Packages
+
+We build a lot of reusable javascript libraries, and distribution with npm is increasingly becoming the defacto standard
+for deploying packages.
+
+We tried Bower, it has its own issues.
+
+### Testing
+
+Testing javascript in javascript.
 
 ## Installation
 
@@ -22,7 +39,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+see `doc/usage.md`
 
 ## Development
 
@@ -32,5 +49,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/npm-assets.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jobready/npm-assets.
 
