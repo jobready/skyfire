@@ -28,7 +28,7 @@ Testing javascript in javascript.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'npm-assets'
+gem 'skyfire'
 ```
 
 And then execute:
@@ -37,7 +37,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install npm-assets
+    $ gem install skyfire
 
 ## Usage
 
@@ -51,5 +51,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/jobready/npm-assets.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jobready/skyfire.
 
