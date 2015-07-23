@@ -1,14 +1,16 @@
 # NPM Assets
 
-NPM Assets is entended to replace the asset pipeline in Ruby On Rails applications.
+NPM Assets replaces the asset pipeline in Ruby On Rails applications.
 
-It uses node utilities (browserify) to manage assets and js/css packages.
+It uses node utilities (npm, browserify) to manage assets and js/css packages.
 
 ## Rationale
 
 ### Language
 
 We love ES6 and integration into the existing asset pipeline can be a bit hit and miss.
+
+We aim to avoid mixing import concepts between files and standardising on a common approach to developing javascript applications.
 
 ### Packages
 
