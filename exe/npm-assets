@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-BASE_DIR=$(dirname $BASH_SOURCE)
-source ${BASE_DIR}/includes/common.sh
-type browserify
-browserify -d -t babelify -g uglifyify

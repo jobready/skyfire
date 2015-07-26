@@ -1,0 +1,8 @@
+lib
+spec
+.rspec
+.travis.yml
+Gemfile
+Rakefile
+README.md
+*.gemspec
