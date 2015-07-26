@@ -16,7 +16,7 @@ Disable the asset pipeline add the following snippet to application.rb.
 ```ruby
 module ApplicationHelper
     included do
-      include Skyfire::ApplicationHelper
+      include Skyfire::AssetsHelper
     end
 end
 ```

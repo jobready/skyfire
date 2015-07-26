@@ -1,5 +1,5 @@
 module Skyfire
-  module ApplicationHelper
+  module AssetsHelper
     extend ::ActiveSupport::Concern
 
     included do
