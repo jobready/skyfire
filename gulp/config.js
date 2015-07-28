@@ -2,9 +2,12 @@ require('shelljs/global');
 var rootDir = exec('git rev-parse --show-toplevel', {silent:true}).output.replace(/\n$/, '');
 var publicAssets = rootDir+"/public/assets";
 var sourceFiles  = rootDir+"/app/assets";
+var appDir  = rootDir+"/app";
 
 module.exports = {
     publicAssets: publicAssets,
+    appDir: appDir,
+    rootDir: rootDir,
     sass: {
         src: sourceFiles + "/stylesheets/**/*.{css,sass,scss}",
         dest: publicAssets + "/stylesheets",
@@ -25,5 +28,10 @@ module.exports = {
             outputName: 'bundle.js',
             extensions: ['.js','.jsx']
         }]
+    },
+    browserSync: {
+        proxy: 'localhost:3002',
+        files: ['./app/views/**']
     }
 };
+

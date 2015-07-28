@@ -5,31 +5,32 @@ module Skyfire
     included do
 
       def stylesheet_link_tag(url, options={})
-        url = Npm::Assets::AssetManifest.stylesheet_path(url)
+        url = Skyfire::AssetManifest.stylesheet_path(url)
 
         super(url, options)
       end
 
-      def crossorigin_javascript_include_tag(url, options={})
-        url = Npm::Assets::AssetManifest.javascript_path(url)
+      def javascript_include_tag(url, options={})
+        byebug
+        url = Skyfire::AssetManifest.javascript_path(url)
 
         super(url, options)
       end
 
       def image_tag(url, options={})
-        url = AssetManifest.asset_path(url)
+        url = Skyfire::AssetManifest.asset_path(url)
 
         super(url, options)
       end
 
       def image_path(url, options={})
-        url = Npm::Assets::AssetManifest.asset_path(url)
+        url = Skyfire::AssetManifest.asset_path(url)
 
         super(url, options)
       end
 
       def image_url(url, options={})
-        url = Npm::Assets::AssetManifest.asset_path(url)
+        url = Skyfire::AssetManifest.asset_path(url)
 
         super((ActionController::Base.asset_host || "") + url, options)
       end

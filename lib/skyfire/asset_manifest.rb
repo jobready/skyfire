@@ -1,8 +1,9 @@
 module Skyfire
   class AssetManifest
     def self.manifest
-      if File.exists?("rev-manifest.json")
-        @manifest ||= JSON.parse(File.read("rev-manifest.json"))
+      rev_manifest_path = 'public/assets/rev-manifest.json'
+      if File.exists?(rev_manifest_path)
+        @manifest ||= JSON.parse(File.read(rev_manifest_path))
       end
     end
 
@@ -10,6 +11,7 @@ module Skyfire
       if AssetManifest.manifest
         url += ".css" unless url.end_with?(".css")
         AssetManifest.manifest[url] || url
+        "/assets/#{url}"
       else
         url
       end
@@ -19,6 +21,7 @@ module Skyfire
       if AssetManifest.manifest
         url += ".js" unless url.end_with?(".js")
         AssetManifest.manifest[url] || url
+        "/assets/#{url}"
       else
         url
       end
@@ -26,7 +29,8 @@ module Skyfire
 
     def self.asset_path(url)
       if AssetManifest.manifest
-        AssetManifest.manifest[url] || url
+         AssetManifest.manifest[url] || url
+         "/assets/#{url}"
       else
         url
       end
